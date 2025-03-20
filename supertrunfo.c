@@ -40,6 +40,17 @@
             .pontos_turisticos = 25
         };
 
+        // Calculando a densidade populacional e o PIB per capita para a Carta 1
+
+        float densidade_populacional1 = (carta1 .populacao * 1e6) / carta1.area; // População em habitantes, área em Km²
+        float pib_per_capita1 = (carta1 .pib * 1e9) / (carta1 .populacao * 1e6); // PIB em reais, população em habitantes
+
+         // Calculando a densidade populacional e o PIB per capita para a Carta 2
+         float densidade_populacional2 = (carta2 .populacao * 1e6) / carta2.area; // População em habitantes, área em Km²
+        float pib_per_capita2 = (carta2 .pib * 1e9) / (carta2 .populacao * 1e6); // PIB em reais, população em habitantes
+
+
+
         //Exibindo os dados da Carta 1
         printf("Carta 1: \n");
         printf("Estado: %s\n", carta1.estado);
@@ -49,6 +60,9 @@
         printf("Área: %.3f km²\n", carta1.area);
         printf("PIB: %.3f bilhões\n", carta1.pib);
         printf("Pontos Turísticos %d\n\n", carta1.pontos_turisticos);
+        printf("Densidade Populacional: %.2f hab/km²\n", densidade_populacional1);
+        printf("PIB per Capita: %.2f reais\n\n", pib_per_capita1);
+
 
 
         //Exibindo os dados da Carta 2
@@ -60,6 +74,8 @@
         printf("Área: %.3f km²\n", carta2.area);
         printf("PIB: %.3f bilhões\n", carta2.pib);
         printf("Pontos Turísticos %d\n\n", carta2.pontos_turisticos);
+        printf("Densidade Populacional: %.2f hab/km²\n", densidade_populacional2);
+        printf("PIB per Capita: %.2f reais\n\n", pib_per_capita2);
 
 
         return 0;
